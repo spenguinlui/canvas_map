@@ -1,0 +1,14 @@
+{
+  "name": "canvas_map",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "dev": "parcel index.html",
+    "start": "parcel watch index.html",
+    "build": "parcel build index.html"
+  }
+}
