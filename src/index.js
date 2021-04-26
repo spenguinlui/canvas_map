@@ -1,3 +1,7 @@
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import './style.sass';
+
 import { blockWidth, Colors, location_latlon } from './js/varaible';
 import { drawBackGround as _drawBackGround, drawGrid as _drawGrid } from './js/grid';
 import { fillPoint, strokeLine, drawText } from './js/material';
