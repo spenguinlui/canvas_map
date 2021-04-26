@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "grid.js": "^1.0.0",
+    "js": "^0.1.0",
     "parcel-bundler": "^1.12.5"
   },
   "scripts": {
