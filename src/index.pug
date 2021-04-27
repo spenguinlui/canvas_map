@@ -3,4 +3,21 @@ html(lang="zh-tw")
   head
     script(src="index.js")
   body
-    canvas#mycanvas
+    .container
+      .row
+        .col-7
+          canvas#mycanvas
+        .col-5 
+          h2.my-4
+            span.badge.badge-secondary 控制列
+          .row.ml-1
+            .custom-control.custom-switch.col-3
+              input(type="checkbox" checked).custom-control-input#randomDisplay
+              label(for="randomDisplay").custom-control-label.badge.badge-light 隨機開關
+            .custom-control.custom-switch.col-3
+              input(type="checkbox").custom-control-input#regularDisplay
+              label(for="regularDisplay").custom-control-label.badge.badge-light 固定開關
+          .btn-toolbar.my-3
+            .btn-group
+              button.btn.btn-outline-light#reDrawBtn 重繪
+

@@ -1,7 +1,9 @@
 import { PI2, Colors, textStyle } from './varaible';
+
 // 快速畫圓
 export function fillPoint(x, y, r, style) {
-  const originColor = this.fillStyle;
+  const originFill = this.fillStyle;
+  const originStorke = this.strokeStyle;
   this.beginPath();
   this.arc(x, y, r, 0, PI2);
   this.fillStyle = style.fillColor || Colors.default_line;
@@ -10,7 +12,8 @@ export function fillPoint(x, y, r, style) {
   this.fill();
   this.stroke();
   this.closePath();
-  this.fillStyle = originColor;
+  this.fillStyle = originFill;
+  this.strokeStyle = originStorke;
 }
 
 // 快速畫線
@@ -28,8 +31,8 @@ export function strokeLine(startPoint, endPoint, lineWidth, lineColor) {
 
 // 快速寫字
 export function drawText(x, y, context, color) {
+  if (!context) return;
   this.fillStyle = color;
   this.font = textStyle;
   this.fillText(context, x, y);
-  console.log(context)
 }
